@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEste</title>
+    <meta name="author" content="Ramon Nascimento">
+    <meta name="description" content="Marcos Ramon do Nascimento - WDD 131 - Dynamic Web Fundamentals A website from the courses studies. With focus on javascript">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    
+    <title>WDD 131 - Dynamic Web Fundamentals - Ramon Nascimento</title>
 </head>
 <body>
-    <h1>TEste 01</h1>
-    <h2>Teste 02b</h2>
+        <header>
+            <h1>WDD 131: Dynamic Web Fundamentals - <span>Marcos Ramon do Nascimento</span></h1>
+            <nav>
+                <a href="https://www.linkedin.com/in/mramon-nascimento">LinkedIn</a>
+                <a href="https://byupw.instructure.com">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
+                <a href="#FinalProject">Final Project</a>
+            </nav>
+        </header>
+    
+    <main>
+        <section class="card">
+            <div class="card-title">
+                About Me            
+            </div>
+            <div class="about">
+                <div class="about-text">
+                    Hello! My name is Ramon Nascimento, I'm 30 years old, and I’m from Brazil. I’m currently seeking new job opportunities and am passionate about mathematics, physics, and programming. In my free time, I enjoy practicing Brazilian jiu-jitsu and diving into a good book. I’m eager to bring my skills and enthusiasm to a dynamic team!
+                </div>
+                <img class="ramon-img" src="images/ramon.jpg" alt="Ramon">
+                <div class="card-city"> Paraíba, Brazil <hr></div>
+                <figure class="pb" ><img src="images/pb.png" > <figcaption>Official flag of Paraíba</figcaption></figure>      
+                <div class="about-pb">Paraíba is a state of Brazil. It is located in the Brazilian Northeast, and it is bordered by Rio Grande do Norte to the north, Ceará to the west, Pernambuco to the south and the Atlantic Ocean to the east.</div>
+            </div>
+        </section>
+        <section class="card2">
+            <div class="card-title">
+                Web Dev Resourses    
+            </div>
+            <div class="card-end">
+                <uL>
+                    <li>
+                        Dev.to Community
+                    </li>
+                    <li>
+                        Smashing Magazine
+                    </li>
+                    <li>
+                        CSS Tricks
+                    </li>
+                    <li>
+                        W3 Schools
+                    </li>
+                    <li>
+                        Udemy
+                    </li>
+                    <li>
+                        Image Placehouder
+                    </li>
+                </uL>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span> - Ramon - Brazil
+        </p>
+        <p class="last">
+            Last modification:
+            <span id="lastModified">
+            </span>
+        </p>
+    </footer>
 </body>
 </html>
