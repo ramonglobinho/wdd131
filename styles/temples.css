@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #DB9067; /* Cor principal */
+    --secondary-color: #DB7B67; /* Cor secundária */
+    --accent-color: #DB67AD; /* Cor de destaque */
+    --background-color: #FFFFFF; /* Cor de fundo */
+    --text-color: #000000; /* Cor do texto */
+    --footer-background-color: #BBBBBB; /* Cor de fundo do rodapé */
+    --footer-text-color: #000000; /* Cor do texto do rodapé */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.pics{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.pics img{
+    max-width: 100%;
+}
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--primary-color);
+    display: grid;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    background-color: var(--secondary-color);
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    font-size: large;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    color: var(--footer-text-color);
+}
+
+.last {
+    color: var(--footer-text-color);
+    font-size: small;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
