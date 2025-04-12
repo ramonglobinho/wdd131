@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}	
+
+.top{
+    padding: 30px;
+    background-color: #009440;
+    text-align: center;
+    border-bottom: 20px solid #ffcb00;
+    color: white;
+}
+
+.data{
+    position: relative
+}
+
+.indata{
+    position: absolute;
+    top: 8%;
+    left: 2%;
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    
+}
