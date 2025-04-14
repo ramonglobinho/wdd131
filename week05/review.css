@@ -1,0 +1,39 @@
+.thank-you {
+    background-color: var(--bg-darker);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.thank-you h1 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.thank-you p {
+    color: var(--text-light);
+    margin: 10px 0;
+}
+
+#reviewCounter {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+#reviewCounter {
+    transition: transform 0.3s;
+}
+#reviewCounter.updated {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
+

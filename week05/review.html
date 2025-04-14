@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link href="review.css" rel="stylesheet">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="thank-you">
+            <h1>Thank You!</h1>
+            <p>Your review has been submitted successfully.</p>
+            <p>We appreciate your feedback!</p>
+            <p>Total reviews submitted: <span id="reviewCounter">0</span></p>
+        </div>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> - Ramon - Brazil</p>
+        <p class="last">Last modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let reviewCount = localStorage.getItem('reviewCount') || 0;
+            
+            document.getElementById('reviewCounter').textContent = reviewCount;
+            document.getElementById('currentyear').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+            });
+    </script>
+</body>
+</html>
