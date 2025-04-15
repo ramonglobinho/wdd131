@@ -1,39 +1,31 @@
-/* ================ */
-/* Accessibility & Design Principles */
-/* ================ */
+
 :root {
-    /* Color Scheme (WCAG AA compliant) */
-    --primary: #6A0DAD;         /* Deep Purple - better contrast than #800080 */
-    --primary-light: #9C27B0;   /* Lighter purple for hover states */
-    --secondary: #F3F7F0;       /* Off-white background */
-    --text-dark: #2D3748;       /* High-contrast dark gray (better than pure black) */
-    --text-light: #4A5568;      /* Secondary text */
+    --primary: #6A0DAD;         
+    --primary-light: #9C27B0;   
+    --secondary: #F3F7F0;       
+    --text-dark: #2D3748;      
+    --text-light: #4A5568;      
     --white: #FFFFFF;
-    --focus-ring: #3182CE;      /* Blue focus indicator for accessibility */
+    --focus-ring: #3182CE;      
     
-    /* Spacing System */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
     --space-lg: 2rem;
     --space-xl: 3rem;
     
-    /* Typography */
     --text-base: 1rem;
     --text-lg: 1.125rem;
     --text-xl: 1.25rem;
     --text-2xl: 1.5rem;
     --text-3xl: 2rem;
     
-    /* Border radius */
     --rounded-sm: 4px;
     --rounded-md: 8px;
     --rounded-lg: 12px;
   }
   
-  /* ================ */
-  /* Base Styles (Accessibility First) */
-  /* ================ */
+
   * {
     box-sizing: border-box;
   }
@@ -52,9 +44,6 @@
     -webkit-font-smoothing: antialiased;
   }
   
-  /* ================ */
-  /* Typography (Hierarchy & Readability) */
-  /* ================ */
   h1, h2, h3, h4 {
     line-height: 1.2;
     margin-top: 0;
@@ -73,7 +62,7 @@
   
   p {
     margin-bottom: var(--space-md);
-    max-width: 65ch; /* Optimal line length for readability */
+    max-width: 65ch; 
   }
   
   a {
@@ -86,9 +75,7 @@
     color: var(--primary-light);
   }
   
-  /* ================ */
-  /* Navigation (Usability & Accessibility) */
-  /* ================ */
+
   nav {
     background-color: var(--primary);
     padding: var(--space-sm);
@@ -126,9 +113,7 @@
     box-shadow: 0 0 0 3px var(--focus-ring);
   }
   
-  /* ================ */
-  /* Layout & Containers (Visual Hierarchy) */
-  /* ================ */
+
   .container {
     width: 100%;
     max-width: 1200px;
@@ -136,9 +121,7 @@
     padding: var(--space-lg);
   }
   
-  /* ================ */
-  /* Project Cards (Visual Appeal & Usability) */
-  /* ================ */
+
   .project-card {
     background: var(--white);
     border-radius: var(--rounded-md);
@@ -164,9 +147,7 @@
     margin-bottom: var(--space-xs);
   }
   
-  /* ================ */
-  /* Contact Page (Usability) */
-  /* ================ */
+
   .contact-methods {
     display: grid;
     gap: var(--space-sm);
@@ -188,9 +169,7 @@
     transform: translateX(4px);
   }
   
-  /* ================ */
-  /* Footer (Consistency) */
-  /* ================ */
+
   footer {
     background-color: var(--primary);
     color: var(--white);
@@ -199,9 +178,7 @@
     margin-top: var(--space-xl);
   }
   
-  /* ================ */
-  /* Accessibility Enhancements */
-  /* ================ */
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -225,7 +202,7 @@
     border-radius: var(--rounded-md);
 }
 
-/* Hero Section */
+
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -238,7 +215,7 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* About Section */
+
 .about-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -246,7 +223,6 @@
     margin: var(--space-xl) 0;
 }
 
-/* Value Proposition Cards */
 .value-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -270,7 +246,6 @@
     margin-bottom: var(--space-md);
 }
 
-/* Footer Image */
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -278,7 +253,6 @@
     gap: var(--space-sm);
 }
 
-/* Contact Page Specific Styles */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -352,7 +326,6 @@ textarea {
     border: 1px solid #E2E8F0;
 }
 
-/* Theme System */
 [data-theme="dark"] {
     --primary: #9C27B0;
     --secondary: #1A1A2E;
@@ -361,7 +334,6 @@ textarea {
     --white: #16213E;
   }
   
-  /* Form Styles */
   .alert {
     padding: var(--space-md);
     border-radius: var(--rounded-md);
@@ -378,7 +350,6 @@ textarea {
     opacity: 0;
   }
   
-  /* Project Filters */
   .filter-container {
     display: flex;
     gap: var(--space-sm);
@@ -411,7 +382,6 @@ textarea {
     to { opacity: 1; transform: translateY(0); }
   }
   
-  /* Theme Toggle */
   #themeToggle {
     background: transparent;
     border: none;
@@ -421,7 +391,6 @@ textarea {
     font-size: var(--text-base);
   }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
@@ -432,9 +401,7 @@ textarea {
     }
 }
   
-  /* ================ */
-  /* Responsive Design (Mobile First) */
-  /* ================ */
+
   @media (max-width: 768px) {
     :root {
       --text-base: 0.9375rem;
@@ -462,7 +429,6 @@ textarea {
     }
   }
 
-  /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -472,7 +438,6 @@ textarea {
     }
 }
 
-/* Contact page specific */
 .contact-methods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
