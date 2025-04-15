@@ -1,0 +1,496 @@
+/* ================ */
+/* Accessibility & Design Principles */
+/* ================ */
+:root {
+    /* Color Scheme (WCAG AA compliant) */
+    --primary: #6A0DAD;         /* Deep Purple - better contrast than #800080 */
+    --primary-light: #9C27B0;   /* Lighter purple for hover states */
+    --secondary: #F3F7F0;       /* Off-white background */
+    --text-dark: #2D3748;       /* High-contrast dark gray (better than pure black) */
+    --text-light: #4A5568;      /* Secondary text */
+    --white: #FFFFFF;
+    --focus-ring: #3182CE;      /* Blue focus indicator for accessibility */
+    
+    /* Spacing System */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    
+    /* Typography */
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    
+    /* Border radius */
+    --rounded-sm: 4px;
+    --rounded-md: 8px;
+    --rounded-lg: 12px;
+  }
+  
+  /* ================ */
+  /* Base Styles (Accessibility First) */
+  /* ================ */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--secondary);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* ================ */
+  /* Typography (Hierarchy & Readability) */
+  /* ================ */
+  h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  h1 {
+    font-size: var(--text-3xl);
+  }
+  
+  h2 {
+    font-size: var(--text-2xl);
+  }
+  
+  p {
+    margin-bottom: var(--space-md);
+    max-width: 65ch; /* Optimal line length for readability */
+  }
+  
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  
+  a:hover, a:focus {
+    color: var(--primary-light);
+  }
+  
+  /* ================ */
+  /* Navigation (Usability & Accessibility) */
+  /* ================ */
+  nav {
+    background-color: var(--primary);
+    padding: var(--space-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--rounded-sm);
+    transition: background-color 0.2s ease;
+  }
+  
+  nav a:hover, 
+  nav a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    outline: none;
+  }
+  
+  nav a:focus {
+    box-shadow: 0 0 0 3px var(--focus-ring);
+  }
+  
+  /* ================ */
+  /* Layout & Containers (Visual Hierarchy) */
+  /* ================ */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+  
+  /* ================ */
+  /* Project Cards (Visual Appeal & Usability) */
+  /* ================ */
+  .project-card {
+    background: var(--white);
+    border-radius: var(--rounded-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-right: var(--space-xs);
+    margin-bottom: var(--space-xs);
+  }
+  
+  /* ================ */
+  /* Contact Page (Usability) */
+  /* ================ */
+  .contact-methods {
+    display: grid;
+    gap: var(--space-sm);
+  }
+  
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    background: var(--white);
+    border-radius: var(--rounded-md);
+    transition: all 0.2s ease;
+  }
+  
+  .contact-link:hover, 
+  .contact-link:focus {
+    background: rgba(106, 13, 173, 0.1);
+    transform: translateX(4px);
+  }
+  
+  /* ================ */
+  /* Footer (Consistency) */
+  /* ================ */
+  footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: var(--space-md);
+    margin-top: var(--space-xl);
+  }
+  
+  /* ================ */
+  /* Accessibility Enhancements */
+  /* ================ */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  :focus {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--rounded-md);
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.hero-image img {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+/* Value Proposition Cards */
+.value-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.value-card {
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--rounded-lg);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card img {
+    margin-bottom: var(--space-md);
+}
+
+/* Footer Image */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+/* Contact Page Specific Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+}
+
+.contact-form {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--rounded-lg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 600;
+    color: var(--primary);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 2px solid #E2E8F0;
+    border-radius: var(--rounded-sm);
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--rounded-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+}
+
+.contact-options {
+    display: grid;
+    gap: var(--space-sm);
+    margin: var(--space-lg) 0;
+}
+
+.location img {
+    margin-top: var(--space-sm);
+    border: 1px solid #E2E8F0;
+}
+
+/* Theme System */
+[data-theme="dark"] {
+    --primary: #9C27B0;
+    --secondary: #1A1A2E;
+    --text-dark: #E2E8F0;
+    --text-light: #CBD5E0;
+    --white: #16213E;
+  }
+  
+  /* Form Styles */
+  .alert {
+    padding: var(--space-md);
+    border-radius: var(--rounded-md);
+    margin-bottom: var(--space-lg);
+    transition: opacity 0.3s ease;
+  }
+  
+  .alert.success {
+    background-color: #48BB78;
+    color: white;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+  /* Project Filters */
+  .filter-container {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+  
+  .filter-btn {
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: var(--rounded-sm);
+    cursor: pointer;
+  }
+  
+  .filter-btn.active {
+    background: var(--primary);
+    color: var(--white);
+  }
+  
+  .project-card {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .animate-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Theme Toggle */
+  #themeToggle {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--text-base);
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-methods {
+        margin-top: var(--space-xl);
+    }
+}
+  
+  /* ================ */
+  /* Responsive Design (Mobile First) */
+  /* ================ */
+  @media (max-width: 768px) {
+    :root {
+      --text-base: 0.9375rem;
+      --text-lg: 1rem;
+      --text-xl: 1.125rem;
+      --text-2xl: 1.25rem;
+      --text-3xl: 1.5rem;
+    }
+    
+    .container {
+      padding: var(--space-md);
+    }
+    
+    nav ul {
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .hero, .about-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image, .about-image {
+        order: -1;
+    }
+  }
+
+  /* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Contact page specific */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: var(--rounded-lg);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: var(--primary);
+    color: var(--white);
+}

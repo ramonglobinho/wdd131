@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="preload" href="index.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site about my projects and studies.">
+    <meta name="author" content="Ramon">
+    <title>Contact - Ramon Nascimento</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="index.js" defer></script>
+    <link href="index.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container"> 
+        <h1>Let's Collaborate</h1>
+        <p>Seeking:</p>
+        <ul>
+            <li>➡️ Teaching opportunities in STEM</li>
+            <li>➡️ Educational technology projects</li>
+            <li>➡️ Software development internships</li>
+        </ul>
+        
+        <div class="contact-grid">
+            <!-- Contact Form Section -->
+            <section class="contact-form" aria-labelledby="form-heading">
+                <h2 id="form-heading">Send Me a Message</h2>
+                <form id="contactForm" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required 
+                               aria-required="true" placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required 
+                               aria-required="true" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required aria-required="true">
+                            <option value="" disabled selected>Select a topic</option>
+                            <option value="teaching">Teaching Opportunity</option>
+                            <option value="project">Project Collaboration</option>
+                            <option value="internship">Internship Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-method">Preferred Contact Method:</label>
+                        <select id="contact-method" name="contact-method">
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="whatsapp">WhatsApp</option>
+                        </select>
+                    </div>
+                    
+                    <div id="phone-field" class="form-group" style="display: none;">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  aria-required="true" placeholder="Your message..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        Send Message
+                    </button>
+                </form>
+            </section>
+            
+            <!-- Alternative Contact Methods -->
+            <section class="contact-methods" aria-labelledby="direct-contact-heading">
+                <h2 id="direct-contact-heading">Direct Contact</h2>
+                <p>Prefer to reach out directly?</p>
+                
+                <div class="contact-options">
+                    <a href="mailto:marcos.nascimento@academico.ifpb.edu.br" class="contact-link">
+                        <span aria-hidden="true">📧</span> Academic Email
+                    </a>
+                    <a href="mailto:marcos.nascimento@academico.ifpb.edu.br" class="contact-link">
+                        <span aria-hidden="true">💻</span> Developer Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/mramon-nascimento" target="_blank" rel="noopener" class="contact-link">
+                        <span aria-hidden="true">🔗</span> LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/ramonglobinho" target="_blank" rel="noopener" class="contact-link">
+                        <span aria-hidden="true">🐙</span> GitHub Profile
+                    </a>
+                </div>
+                
+                <div class="location">
+                    <h3>Based in Brazil</h3>
+                    <p>Available for remote collaborations worldwide</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245795.84053317798!2d-48.10217022315927!3d-15.72148702312245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2zQnJhc8OtbGlhLCBERg!5e0!3m2!1spt-BR!2sbr!4v1744677139225!5m2!1spt-BR!2sbr" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span> - Ramon - Brazil
+        </p>
+        <p class="last">
+            Last modification:
+            <span id="lastModified">
+            </span>
+        </p>
+    </footer>
+</body>
+</html>
