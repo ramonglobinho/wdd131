@@ -3,41 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About places and their history.">
+    <meta name="description" content="Discover Brazil: the largest country in South America with diverse culture and beautiful landscapes.">
     <meta name="author" content="Ramon">
-    <title>Temple Album</title>
+    <title>Come to Brazil</title>
+    <link href="styles/place-large.css" rel="stylesheet">
     <link href="styles/place.css" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-            <div class="top">
-                <h1>Brasil</h1>    
+        <h1>Brazil</h1>
     </header>
     <main>
-        <div class="data">
-        <figure>
-            <img src="images/brasil.webp" alt="Brasil" width="100%" height="auto">
-        </figure>
-        <div class="indata">
-            
-
-        </div>
-        </div>
-
+        <section class="heroimage">
+            <picture>
+                <source media="(min-width: 901px)" 
+                        srcset="images/brasil.webp 1920w,
+                                images/brasil-medium.webp 1200w"
+                        sizes="100vw">
+                
+                <source media="(min-width: 601px)" 
+                        srcset="images/brasil-medium.webp 1200w,
+                                images/brasil-small.webp 800w"
+                        sizes="100vw">
+                
+                <img src="images/redentor.webp" 
+                     srcset="images/redentor.webp 600w,
+                             images/redentor-small.webp 400w"
+                     sizes="100vw"
+                     alt="Christ the Redeemer statue overlooking Rio de Janeiro"
+                     loading="lazy">
+            </picture>
+        </section>
+        <section class="countrydata">
+            <h2>Country Data</h2>
+            <ul>
+                <li><b>Area:</b> 8,515,767 km²</li>
+                <li><b>Population:</b> 215 million</li>
+                <li><b>Capital:</b> Brasília</li>
+                <li><b>Official Language:</b> Portuguese</li>
+                <li><b>Currency:</b> Brazilian Real (R$)</li>
+                <li><b>Time zone:</b> BRT (UTC-3 to UTC-5)</li>
+                <li><b>Calling code:</b> +55</li>
+                <li><b>Internet TLD:</b> .br</li>
+            </ul>
+        </section>
+        <section class="weatherdata">
+            <h2>Weather</h2>
+            <img class="weather-icon" src="images/weather.png" alt="Current weather condition icon">
+            <ul>
+                <li class="temperature"></li>
+                <li class="condition"></li>
+                <li class="windspeed"></li>
+                <li class="windchill"></li>
+            </ul>
+        </section>
     </main>
     <footer>
-        <p>
-            © <span id="currentyear"></span> - Ramon - Brazil
-        </p>
-        <p class="last">
-            Last modification:
-            <span id="lastModified">
-            </span>
-        </p>
+        <p>© <span id="currentyear"></span> - Ramon - Brazil</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
